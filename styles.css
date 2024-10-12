@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    min-width: 320px;
+}
+body{
+    position: relative;
+    background-color: #257180;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.disabled{
+    filter: brightness(60%);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.wrong{
+    background-color: red;
+    opacity: 0.8;
+}
+
+.right{
+    background-color: #4CA64C;
+}
+
+.disabled:hover{
+    box-shadow: none;
+    filter:brightness(60%);
+}
+
+.title-section{
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2em;
+}
+
+.title-section>h1{
+    font-size: clamp(4rem, 9vw, 18rem);
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #E67E22;
+    text-shadow: 
+        -1.5px -1.5px 0 #000,  
+         1.5px -1.5px 0 #000,  
+        -1.5px  1.5px 0 #000,  
+         1.5px  1.5px 0 #000; 
+}
+
+.title-section>h3{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(0.5rem, 3.5vw, 5rem);
+    color:#E0E0E0;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,  
+        -1px  1px 0 #000,  
+         1px  1px 0 #000; 
+}
+
+.game-section{
+    position: relative;
+    height: 40%;
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr;
+    gap:1em;
+}
+
+.word-guesses-wrap{
+    position: relative;
+}
+
+.word-guesses-group{
+    position: absolute;
+    text-align: left;
+    top:50%;
+    left:25%;
+    transform: translateX(-25%) translateY(-50%);
+}
+
+.word{
+    font-size: clamp(1em, 6vw, 5.5em);
+    margin-bottom: 0.2em;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.guesses-left{
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(0.1em, 2.5vw, 2.5em);
+    color:#E0E0E0;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,  
+        -1px  1px 0 #000,  
+         1px  1px 0 #000; 
+}
+    
+img{
+    position: absolute;
+    height:clamp(6em, 150%, 15em);
+    width:auto;
+    max-width: 90%;
+    top:50%;
+    right:50%;
+    transform:translateX(50%) translateY(-50%);
+    
+}
+.hung-man{
+    position: relative;
+}
+
+.hung-man-wrap{
+    position:relative;
+    height: 100%;
+    width:100%;
+}
+
+.game-section, .button-wrapper, .footer-section {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.button-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:baseline;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    flex-grow: 1;
+    
+}
+
+button{
+    margin-right: 2em;
+    margin-left: 2em;
+    width: clamp(6em, 13vw, 30em);
+    height: clamp(3em, 2vw, 15em);
+    font-size: 3vmin;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#E0E0E0;
+    border:2px solid black;
+    border-radius: 10px;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,  
+        -1px  1px 0 #000,  
+         1px  1px 0 #000;
+    cursor:pointer;
+    
+}
+
+.left-button{
+    background-color: #4CA64C;
+}
+
+.mid-button{
+    background-color: #E67E22;
+}
+
+.right-button{
+    background-color: red;
+}
+
+button:hover{
+    filter:brightness(110%);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: box-shadow 0.1s ease;
+}
+
+.footer-section{
+    position: relative;
+    bottom: 0;
+    padding: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+footer{
+    font-size: clamp(0.5rem, 1.5vw, 5rem);
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,  
+        -1px  1px 0 #000,  
+         1px  1px 0 #000;
+}
